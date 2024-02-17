@@ -53,7 +53,17 @@ For manual install:
 
 - Append ```rpi-noctua-fan-control``` to ```~/printer_data/moonraker.asvc```
 
+  ```
+  echo "rpi-noctua-fan-control" >> ~/printer_data/moonraker.asvc
+  ```
+
 - Append update config to ```~/printer_data/config/moonraker.conf```
+
+  ```
+  cat moonraker-config.conf >> ~/printer_data/config/moonraker.conf
+  ```
+
+  or copy and paste
 
   ```
   [update_manager rpi-noctua-fan-control]
