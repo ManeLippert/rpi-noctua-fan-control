@@ -6,6 +6,7 @@ ExecStart=python /home/pi/rpi-noctua-fan-control/rpi_noctua_fan_control.py
 WorkingDirectory=/home/pi/rpi-noctua-fan-control/
 Restart=always
 User=pi
+Type=simple
 
 [Install]
 WantedBy=multi-user.target

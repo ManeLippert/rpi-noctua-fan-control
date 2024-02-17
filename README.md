@@ -1,4 +1,4 @@
-# Raspberry Noctua Fan Control
+# Raspberry Noctua Fan Control`
 
 ```
                               GPIO
@@ -27,8 +27,41 @@
 NF = Noctua Fan
 
 Colors
-B = Black
-Y = Yellow
-G = Green
-b = Blue
+B = Black, Y = Yellow, G = Green, b = Blue
 ```
+
+For quick MainsailOS install run:
+
+```
+bash install.sh
+```
+
+For manual install:
+
+- Create system service by copying service into ```/etc/systemd/system``` 
+  
+  ```
+  sudo cp rpi-noctua-fan-control.service /etc/systemd/system
+  ```
+
+- Enable and start service 
+
+  ```
+  systemctl enable rpi-noctua-fan-control
+  sudo systemctl start rpi-noctua-fan-control.service
+  ```
+
+- Append ```rpi-noctua-fan-control``` to ```~/printer_data/moonraker.asvc```
+
+- Append update config to ```~/printer_data/config/moonraker.conf```
+
+  ```
+  [update_manager rpi-noctua-fan-control]
+  type: git_repo
+  path: ~/rpi-noctua-fan-control
+  origin: https://github.com/ManeLippert/rpi-noctua-fan-control.git
+  managed_services: rpi-noctua-fan-control
+  primary_branch: main
+  ```
+
+- Restart system with ```sudo reboot now```
