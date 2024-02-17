@@ -4,8 +4,6 @@ Description=Raspberry Fan Control
 [Service]
 ExecStart=python /home/pi/rpi-noctua-fan-control/rpi_noctua_fan_control.py
 WorkingDirectory=/home/pi/rpi-noctua-fan-control/
-StandardOutput=inherit
-StandardError=inherit
 Restart=always
 User=pi
 
