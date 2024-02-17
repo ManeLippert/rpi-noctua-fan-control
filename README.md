@@ -74,4 +74,8 @@ For manual install:
   primary_branch: main
   ```
 
-- Restart system with ```sudo reboot now```
+- Restart system
+
+  ```
+  sudo reboot now
+  ```
