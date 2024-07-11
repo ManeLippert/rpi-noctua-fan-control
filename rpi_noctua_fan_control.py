@@ -25,8 +25,8 @@ PWM_FREQ = 25           # [Hz] PWM frequency
 
 FAN_PIN = 15            # BCM pin used to drive PWM fan
 
-OFF_TEMP = 30           # [°C] temperature below which to stop the fan
-MIN_TEMP = 30           # [°C] temperature above which to start the fan
+OFF_TEMP = 50           # [°C] temperature below which to stop the fan
+MIN_TEMP = 50           # [°C] temperature above which to start the fan
 MAX_TEMP = 70           # [°C] temperature at which to operate at max fan speed
 
 FAN_LOW = 1
